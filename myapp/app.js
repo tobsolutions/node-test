@@ -12,6 +12,7 @@ app.get('/test', (req, res) => {
     .then((response) => {
       const { data } = response;
       res.json(data);
+      res.send('text');
     })
     .catch((error) => {
       console.log(error);
