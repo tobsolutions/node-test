@@ -8,12 +8,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-  axios.get('https://api.billbee.io/api/v1/orders',{
-      headers: {
-          'MyCustomHeader1': '1',
-          'MyCustomHeader2': '2'
-      }
-    })
+  axios.get('https://jsonplaceholder.typicode.com/todos/1')
     .then((response) => {
       const { data } = response;
       res.json(data);
