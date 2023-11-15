@@ -7,8 +7,15 @@ app.get('/', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-  res.send('Test funktioniert')
-})
+  axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
+)
 
 
 app.listen(port, () => {
