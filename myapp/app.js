@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 app.get('/test', (req, res) => {
   axios.get('https://jsonplaceholder.typicode.com/todos/1')
     .then((response) => {
-      return response;
+      return response.json();
     })
     .catch((error) => {
       console.log(error);
